@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { processItems } from "./constants";
 import { ProcessItem } from "./components/ProcessItem";
 import { Popup } from "./components/Popup";
