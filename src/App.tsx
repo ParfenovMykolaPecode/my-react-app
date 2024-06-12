@@ -32,9 +32,7 @@ function App() {
         }}
       >
         <div className="absolute bottom-4 right-4 z-20">
-          {/* Small window in the lower right corner */}
           <div className="w-64 h-36 bg-white border border-gray p-4 shadow-md items-start rounded-md">
-            {/* Content of the small window */}
             <p className="text-base font-medium text-black">
               A to Z Construction, LLC
             </p>
@@ -45,44 +43,32 @@ function App() {
                 alt="Status Icon"
                 className="w-30 h-30 mr-10"
               />{" "}
-              {/* Status Icon */}
             </div>
             <div className="flex justify-between w-full mt-4">
               <p className="text-base text-gray-500">Reviews</p>
               <img src={rating} alt="Reviews Icon" className="w-30 h-30" />{" "}
-              {/* Reviews Icon */}
             </div>
           </div>
         </div>
       </div>{" "}
-      {/* Overlay gradient */}
       <div className="grid grid-cols-1 gap-4 mt-12">
-        {/* First Item */}
         <Item
           title="Upload Business License"
           description="Upload your articles of incorporation, contractor license, or other registration with the state."
           icon={icon100}
         />
-
-        {/* Second Item */}
         <Item title="Complete Onboarding Questionnaire" icon={icon50} />
-
-        {/* Third Item */}
         <Item
           title="Sign NDA"
           description="NDA will be sent separately, via Adobe e-sign"
           icon={icon30}
         />
-
-        {/* Fourth Item */}
         <Item
           title="Upload Certificate of Insurance"
           description="Requirements and example document attached."
           link={"accord_sample.pdf"}
           icon={icon0}
         />
-
-        {/* Add more items as needed */}
       </div>
     </div>
   );
