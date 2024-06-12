@@ -4,7 +4,8 @@ import icon50 from "./assets/icon50.svg";
 import icon30 from "./assets/icon30.svg";
 import icon0 from "./assets/icon0.svg";
 import badge from "./assets/Badge.svg";
-import rating from "./assets/Stars.svg";
+import star from "./assets/star.svg";
+import emptyStar from "./assets/emptyStar.svg";
 
 function Item({ title, description, icon, link }) {
   return (
@@ -32,7 +33,7 @@ function App() {
         }}
       >
         <div className="absolute bottom-4 right-4 z-20">
-          <div className="w-64 h-36 bg-white border border-gray p-4 shadow-md items-start rounded-md">
+          <div className="w-72 h-36 bg-white border border-gray p-4 shadow-md items-start rounded-md">
             <p className="text-base font-medium text-black">
               A to Z Construction, LLC
             </p>
@@ -41,12 +42,26 @@ function App() {
               <img
                 src={badge}
                 alt="Status Icon"
-                className="w-30 h-30 mr-10"
+                className="w-30 h-30 mr-14"
               />{" "}
             </div>
             <div className="flex justify-between w-full mt-4">
               <p className="text-base text-gray-500">Reviews</p>
-              <img src={rating} alt="Reviews Icon" className="w-30 h-30" />{" "}
+              <p className="text-base text-gray-500 ml-6">4</p>
+              <div className="flex items-center">
+                {[...Array(5)].map((_, index) =>
+                  index === 4 ? (
+                    <img src={emptyStar} alt="Star" className="w-6 h-6 mr-1" />
+                  ) : (
+                    <img
+                      key={index}
+                      src={star}
+                      alt="Star"
+                      className="w-6 h-6 mr-1"
+                    />
+                  )
+                )}
+              </div>
             </div>
           </div>
         </div>
